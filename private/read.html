@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Find the passage, check the recording and choose the cut. Review transcript edits, examples and the details that preserve meaning.">
+  <title>Read — Clean up A-roll through the transcript | Vasu</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="application.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <!-- Shared header fallback: keep synchronized with _header.html. -->
+  <div data-shared-header>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a class="brand" href="index.html" aria-label="Vasu home"><img src="assets/vasu-mark.png" width="36" height="36" alt=""><span>Vasu</span></a>
+        <nav aria-label="Main"><a href="manifesto.html">Manifesto</a></nav>
+      </div>
+    </header>
+  </div>
+  <main id="main">
+  <article aria-labelledby="page-title">
+<header>
+        <h1 id="page-title">The Read Editor</h1>
+        
+      </header>
+      <section aria-labelledby="edits">
+        <h2 id="edits">Edits this editor supports</h2>
+        <details id="edit-spelling">
+          <summary><h3 id="title-spelling">Fix Spelling</h3></summary>
+          <div class="content">
+            <p>Review a spelling suggestion and choose the replacement that matches what the speaker meant.</p>
+            <div class="table-scroll" role="region" aria-label="Spelling suggestions to review" tabindex="0">
+              <table>
+                <caption>Spelling suggestions to review</caption>
+                <thead><tr><th scope="col">Name</th><th scope="col">Description</th></tr></thead>
+                <tbody>
+                  <tr id="finding-spelling"><th scope="row">Spelling</th><td><p>Correct a misspelled word while preserving what the speaker said.</p><p><strong>Example:</strong> “recieve” → “receive.”</p></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </details>
+        <details id="edit-cut">
+          <summary><h3 id="title-cut">Remove a passage <code>cut_samples</code></h3></summary>
+          <div class="content">
+            <p>Cut false starts, unnecessary repetition and empty waiting. Keep the words that establish facts, uncertainty and context.</p>
+            <p>Listen across both edges of a cut. A shorter passage still needs to sound natural and say what the speaker meant.</p>
+            <div class="table-scroll" role="region" aria-label="Passages to review for cutting" tabindex="0">
+              <table>
+                <caption>Passages to review for cutting</caption>
+                <thead><tr><th scope="col">Name</th><th scope="col">Description</th></tr></thead>
+                <tbody>
+                  <tr id="finding-filler"><th scope="row">Filler<code>filler</code></th><td><p>Remove empty hesitation when it adds no meaning.</p><p><strong>Example:</strong> “We, um, begin.” → “We begin.”</p></td></tr>
+                  <tr id="finding-filler_like"><th scope="row">Filler like<code>filler_like</code></th><td><p>Remove an unnecessary “like”; keep real comparisons.</p><p><strong>Example:</strong> “It’s, like, ready.” → “It’s ready.”</p></td></tr>
+                  <tr id="finding-repeated_token"><th scope="row">Stutter<code>repeated_token</code></th><td><p>Review accidental repeated words while preserving emphasis.</p><p><strong>Example:</strong> “The the plan.” → “The plan.”</p></td></tr>
+                  <tr id="finding-false_start"><th scope="row">False start<code>false_start</code></th><td><p>Remove an abandoned start so the complete thought can follow.</p><p><strong>Example:</strong> “We sh— we should go.” → “We should go.”</p></td></tr>
+                  <tr id="finding-hedge"><th scope="row">Hedge<code>hedge</code></th><td><p>Shorten empty softeners while keeping genuine uncertainty.</p><p><strong>Example:</strong> “A, sort of, square button.” → “A square button.”</p></td></tr>
+                  <tr id="finding-meta_talk"><th scope="row">Slate<code>meta_talk</code></th><td><p>Remove recording directions that do not belong in the cut.</p><p><strong>Example:</strong> “Mic on? Here’s the result.” → “Here’s the result.”</p></td></tr>
+                  <tr id="finding-rambling"><th scope="row">Tangent<code>rambling</code></th><td><p>Shorten a detour while keeping useful context.</p><p><strong>Example:</strong> Setup, detour, result → Setup, result.</p></td></tr>
+                  <tr id="finding-tighten"><th scope="row">Tighten<code>tighten</code></th><td><p>Lose extra wording without changing the point.</p><p><strong>Example:</strong> “At this point, we’re ready.” → “We’re ready.”</p></td></tr>
+                  <tr id="finding-interviewer"><th scope="row">Question<code>interviewer</code></th><td><p>Remove a question only when the answer makes sense on its own.</p><p><strong>Example:</strong> “When?” / “We began in May.” → “We began in May.”</p></td></tr>
+                  <tr id="finding-unpaid_promise"><th scope="row">Unpaid promise<code>unpaid_promise</code></th><td><p>Review promises of material that does not appear in the video.</p><p><strong>Example:</strong> “Chart next. Here’s why.” → “Here’s why.”</p></td></tr>
+                  <tr id="finding-word_outside_speech"><th scope="row">Stray word<code>word_outside_speech</code></th><td><p>Check text where nobody spoke. Correcting it should preserve the recording.</p><p><strong>Example:</strong> Music with an invented word → Music retained, text reviewed.</p></td></tr>
+                  <tr id="finding-silence"><th scope="row">Silence<code>silence</code></th><td><p>Review empty waiting; keep pauses that serve the conversation.</p><p><strong>Example:</strong> Empty wait, then “Hello.” → “Hello.”</p></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </details>
+        <details id="edit-bleep">
+          <summary><h3 id="title-bleep">Cover a spoken detail <code>apply_tone</code></h3></summary>
+          <div class="content">
+            <p>Cover a spoken number or unwanted word with a tone while keeping the surrounding passage.</p>
+            <p>Bleeping is not available for every recording. A privacy flag alone hides nothing: listen to the result and check captions and visible text before sharing.</p>
+            <div class="table-scroll" role="region" aria-label="Spoken details to review" tabindex="0">
+              <table>
+                <caption>Spoken details to review</caption>
+                <thead><tr><th scope="col">Name</th><th scope="col">Description</th></tr></thead>
+                <tbody>
+                  <tr id="finding-private_contact"><th scope="row">Privacy Concerns<code>private_contact</code></th><td><p>Cover a spoken contact detail while keeping the rest of the passage.</p><p><strong>Example:</strong> “Call [private number].” → “Call [tone].”</p></td></tr>
+                  <tr id="finding-swear"><th scope="row">Profanity<code>swear</code></th><td><p>Cover a word that does not suit your audience.</p><p><strong>Example:</strong> “That [swear] launch.” → “That [tone] launch.”</p></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </details>
+        <details id="edit-choose-best">
+          <summary><h3 id="title-choose-best">Review and choose</h3></summary>
+          <div class="content">
+            <p>Compare takes for accuracy, completeness and delivery. Keep the version that says what you intended.</p>
+            <p>Uncertain words, missing text and overlapping voices need listening. A flag identifies a review point; it does not supply missing speech or repair the recording.</p>
+            <div class="table-scroll" role="region" aria-label="Choices to review" tabindex="0">
+              <table>
+                <caption>Choices to review</caption>
+                <thead><tr><th scope="col">Name</th><th scope="col">Description</th></tr></thead>
+                <tbody>
+                  <tr id="finding-uncertain_word"><th scope="row">Misheard<code>uncertain_word</code></th><td><p>Listen again to confirm a word that may have been misheard.</p><p><strong>Example:</strong> Written “Vasso” → Confirmed “Vasu”.</p></td></tr>
+                  <tr id="finding-uncertain_language"><th scope="row">Unknown language<code>uncertain_language</code></th><td><p>Confirm the language before relying on the transcript.</p><p><strong>Example:</strong> Unknown language → Language confirmed.</p></td></tr>
+                  <tr id="finding-script_choice"><th scope="row">Hindi script<code>script_choice</code></th><td><p>Choose the script that suits your reader. A preference alone does not rewrite the transcript.</p><p><strong>Example:</strong> Script undecided → Devanagari preference recorded.</p></td></tr>
+                  <tr id="finding-retake"><th scope="row">Retake<code>retake</code></th><td><p>Compare takes and keep the complete, accurate version.</p><p><strong>Example:</strong> Take A / take B → One complete take.</p></td></tr>
+                  <tr id="finding-paraphrase"><th scope="row">Restatement<code>paraphrase</code></th><td><p>Keep one clear explanation without losing new details.</p><p><strong>Example:</strong> The same point twice → One complete explanation.</p></td></tr>
+                  <tr id="finding-overlap"><th scope="row">Crosstalk<code>overlap</code></th><td><p>Review overlapping voices without losing either person’s contribution.</p><p><strong>Example:</strong> Two voices together → Passage kept for review.</p></td></tr>
+                  <tr id="finding-hook"><th scope="row">Hook<code>hook</code></th><td><p>Review a recorded line that could make a useful opening. A suggestion alone does not move it.</p><p><strong>Example:</strong> Current opening → Stronger recorded line proposed.</p></td></tr>
+                  <tr id="finding-title_tags"><th scope="row">Title<code>title_tags</code></th><td><p>Review a suggested title. A title note does not add an on-screen title.</p><p><strong>Example:</strong> Untitled passage → Title saved as a note.</p></td></tr>
+                  <tr id="finding-speech_without_words"><th scope="row">Missing words<code>speech_without_words</code></th><td><p>Listen where speech is missing from the transcript. Missing text does not mean silence.</p><p><strong>Example:</strong> Transcript gap → Passage marked for listening.</p></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </details>
+        <details id="edit-speakers">
+          <summary><h3 id="title-speakers">Speaker name and reallocate <code>rename_speaker / move_paragraph</code></h3></summary>
+          <div class="content">
+            <p>Name a speaker across their paragraphs, or assign a single paragraph to the person who said it.</p>
+            <p>Speaker corrections change the labels. The recorded voices and timing stay the same.</p>
+            <div class="table-scroll" role="region" aria-label="Speaker corrections" tabindex="0">
+              <table>
+                <caption>Speaker corrections</caption>
+                <thead><tr><th scope="col">Name</th><th scope="col">Description</th></tr></thead>
+                <tbody>
+                  <tr id="finding-speaker_name"><th scope="row">Speaker name<code>speaker_name</code></th><td><p>Give the speaker a confirmed name.</p><p><strong>Example:</strong> Speaker 1 → Priya.</p></td></tr>
+                  <tr id="manual-assign_speaker"><th scope="row">Reallocate<code>move_paragraph</code></th><td><p>Assign a paragraph to the person who said it. This is a manual correction.</p><p><strong>Example:</strong> Reply attributed to Priya → Reply attributed to Arjun.</p></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </details>
+      </section>
+
+    <footer class="page-dates">
+      <hr>
+      <!-- Maintenance: preserve Published At; refresh Updated At on every content update. -->
+      <p class="meta">Published At: <time datetime="2026-11-16T04:23:22+05:30">16 November 2026, 04:23:22 IST</time><br>
+      Updated At: <time datetime="2026-11-16T09:39:34+05:30">16 November 2026, 09:39:34 IST</time></p>
+    </footer>
+  </article>
+  </main>
+</body>
+</html>

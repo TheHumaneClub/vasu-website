@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Review quiet replies, uneven levels and distracting sound. Compare corrections while preserving the voice and delivery.">
+  <title>Listen — Clean up the sound in your A-roll | Vasu</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="application.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <!-- Shared header fallback: keep synchronized with _header.html. -->
+  <div data-shared-header>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a class="brand" href="index.html" aria-label="Vasu home"><img src="assets/vasu-mark.png" width="36" height="36" alt=""><span>Vasu</span></a>
+        <nav aria-label="Main"><a href="manifesto.html">Manifesto</a></nav>
+      </div>
+    </header>
+  </div>
+  <main id="main">
+  <article aria-labelledby="page-title">
+<header>
+        <h1 id="page-title">The Listen Editor</h1>
+        <p>Clean up A-roll audio by reviewing and choosing sound inconsistencies in a timeline editor.</p>
+      </header>
+      <section aria-labelledby="how-it-works">
+        <h2 id="how-it-works">Compare the result</h2>
+        <p>Listen to the original and changed passage at a similar volume. Judge the words and the character of the voice, as well as the loudness.</p>
+        <p>The recording determines which corrections are possible. Some need separate voice and music tracks; each edit below explains what to check.</p>
+        <p><a href="how-it-works.html">How to review and apply suggestions</a></p>
+      </section>
+      <section aria-labelledby="edits">
+        <h2 id="edits">Edits</h2>
+        <details id="edit-gain">
+          <summary><h3 id="title-gain">Raise quiet speech <code>CorrectionStep::Gain</code>.<code>execute_correction</code></h3></summary>
+          <div class="content">
+            <p>Raise a quiet reply so it sits comfortably in the conversation.</p>
+            <p>Background noise rises too. Check that the extra volume helps, and preserve intentional whispers.</p>
+            <div class="table-scroll" role="region" aria-label="Raise quiet speech findings" tabindex="0">
+              <table>
+                <caption>Raise quiet speech findings</caption>
+                <thead><tr><th scope="col">Name</th><th scope="col">Description</th></tr></thead>
+                <tbody>
+                  <tr id="finding-quiet_voice"><th scope="row">Quiet voice<code>quiet_voice</code></th><td><p>Speech is difficult to hear.</p><p><strong>Example:</strong> Quiet reply → Louder reply.</p></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </details>
+        <details id="edit-level_voice">
+          <summary><h3 id="title-level_voice">Balance voice levels <code>CorrectionStep::Level</code>.<code>execute_correction</code></h3></summary>
+          <div class="content">
+            <p>Bring quiet and loud passages closer in volume, reducing the need to adjust playback.</p>
+            <p>The adjustment is fixed within each selected passage. Check that emphasis and quieter moments still feel natural.</p>
+            <div class="table-scroll" role="region" aria-label="Balance voice levels findings" tabindex="0">
+              <table>
+                <caption>Balance voice levels findings</caption>
+                <thead><tr><th scope="col">Name</th><th scope="col">Description</th></tr></thead>
+                <tbody>
+                  <tr id="finding-uneven_voice_levels"><th scope="row">Uneven voice levels<code>uneven_voice_levels</code></th><td><p>Volume changes distract listeners or make some passages difficult to hear.</p><p><strong>Example:</strong> Quiet and loud passages → Closer listening levels.</p></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </details>
+        <details id="edit-limit_peaks">
+          <summary><h3 id="title-limit_peaks">Control loud peaks <code>CorrectionStep::LimitPeaks</code>.<code>execute_correction</code></h3></summary>
+          <div class="content">
+            <p>Restrain sudden peaks while keeping the surrounding speech natural.</p>
+            <p>This cannot restore sound already distorted during recording.</p>
+            <div class="table-scroll" role="region" aria-label="Control loud peaks findings" tabindex="0">
+              <table>
+                <caption>Control loud peaks findings</caption>
+                <thead><tr><th scope="col">Name</th><th scope="col">Description</th></tr></thead>
+                <tbody>
+                  <tr id="finding-excessive_peaks"><th scope="row">Excessive peaks<code>excessive_peaks</code></th><td><p>Sudden loud sounds are uncomfortable or overload the output.</p><p><strong>Example:</strong> Sudden loud burst → Restrained peak.</p></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </details>
+        <details id="edit-map_channels">
+          <summary><h3 id="title-map_channels">Center one-sided dialogue <code>CorrectionStep::Map</code>.<code>execute_correction</code></h3></summary>
+          <div class="content">
+            <p>When dialogue plays in one ear and the other side is silent, centre the voice for more comfortable listening.</p>
+            <p>If each side carries a different speaker, keep both voices.</p>
+            <div class="table-scroll" role="region" aria-label="Center one-sided dialogue findings" tabindex="0">
+              <table>
+                <caption>Center one-sided dialogue findings</caption>
+                <thead><tr><th scope="col">Name</th><th scope="col">Description</th></tr></thead>
+                <tbody>
+                  <tr id="finding-one_sided_dialogue"><th scope="row">Dialogue on only one channel<code>one_sided_dialogue</code></th><td><p>Voice plays predominantly through one ear.</p><p><strong>Example:</strong> Voice on the left, silence on the right → Voice in both ears.</p></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </details>
+        <details id="edit-reduce_hum">
+          <summary><h3 id="title-reduce_hum">Reduce electrical hum <code>CorrectionStep::ReduceHum</code>.<code>execute_correction</code></h3></summary>
+          <div class="content">
+            <p>Reduce steady electrical hum underneath the voice.</p>
+            <p>Check that lower voices still sound full and natural after the change.</p>
+            <div class="table-scroll" role="region" aria-label="Reduce electrical hum findings" tabindex="0">
+              <table>
+                <caption>Reduce electrical hum findings</caption>
+                <thead><tr><th scope="col">Name</th><th scope="col">Description</th></tr></thead>
+                <tbody>
+                  <tr id="finding-electrical_hum"><th scope="row">Electrical hum<code>electrical_hum</code></th><td><p>Buzzing distracts from or masks speech.</p><p><strong>Example:</strong> Voice with hum → Voice with reduced hum.</p></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </details>
+        <details id="edit-duck_music">
+          <summary><h3 id="title-duck_music">Lower music under speech <code>CorrectionStep::Duck</code>.<code>execute_correction</code></h3></summary>
+          <div class="content">
+            <p>Lower the soundtrack where it covers the words, while keeping the voice at its existing level.</p>
+            <p>This needs separate voice and music tracks. Music is lowered across the selected passage; it does not automatically rise and fall between words.</p>
+            <div class="table-scroll" role="region" aria-label="Lower music under speech findings" tabindex="0">
+              <table>
+                <caption>Lower music under speech findings</caption>
+                <thead><tr><th scope="col">Name</th><th scope="col">Description</th></tr></thead>
+                <tbody>
+                  <tr id="finding-music_masks_dialogue"><th scope="row">Music masks dialogue<code>music_masks_dialogue</code></th><td><p>Listeners struggle to understand the words.</p><p><strong>Example:</strong> Music covers an answer → Music lowered over that passage.</p></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </details>
+        <details id="edit-fade_music">
+          <summary><h3 id="title-fade_music">Smooth the music ending <code>CorrectionStep::Fade</code>.<code>execute_correction</code></h3></summary>
+          <div class="content">
+            <p>Fade the music into the ending. Keep a hard stop when it belongs to the edit.</p>
+            <p>Replay the ending after other cuts to check that the fade still fits.</p>
+            <div class="table-scroll" role="region" aria-label="Smooth the music ending findings" tabindex="0">
+              <table>
+                <caption>Smooth the music ending findings</caption>
+                <thead><tr><th scope="col">Name</th><th scope="col">Description</th></tr></thead>
+                <tbody>
+                  <tr id="finding-abrupt_music_ending"><th scope="row">Abrupt music ending<code>abrupt_music_ending</code></th><td><p>The music stops suddenly and makes the ending sound unfinished.</p><p><strong>Example:</strong> Music stops suddenly → Music fades at the ending.</p></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </details>
+      </section>
+
+    <footer class="page-dates">
+      <hr>
+      <!-- Maintenance: preserve Published At; refresh Updated At on every content update. -->
+      <p class="meta">Published At: <time datetime="2026-11-16">16 November 2026</time><br>
+      Updated At: <time datetime="2026-11-16T06:04:56+05:30">16 November 2026, 06:04:56 IST</time></p>
+    </footer>
+  </article>
+  </main>
+</body>
+</html>
